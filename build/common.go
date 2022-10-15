@@ -15,7 +15,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/config"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/fixture"
 	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
-	"github.com/grafana/grafana-plugin-sdk-go/internal"
+	internal "github.com/grafana/grafana-plugin-sdk-go/noninternal"
 	"github.com/magefile/mage/mg"
 	"github.com/magefile/mage/sh"
 )
