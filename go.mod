@@ -2,7 +2,7 @@ module github.com/leostmac/grafana-plugin-sdk-go
 
 go 1.17
 
-replace github.com/grafana/grafana-plugin-sdk-go => github.com/leostmac/grafana-plugin-sdk-go v0.0.2
+replace github.com/grafana/grafana-plugin-sdk-go => ./
 
 require (
 	github.com/apache/arrow/go/arrow v0.0.0-20211112161151-bc219186db40
