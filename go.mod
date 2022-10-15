@@ -2,8 +2,6 @@ module github.com/leostmac/grafana-plugin-sdk-go
 
 go 1.17
 
-replace github.com/grafana/grafana-plugin-sdk-go => ./
-
 require (
 	github.com/apache/arrow/go/arrow v0.0.0-20211112161151-bc219186db40
 	github.com/cheekybits/genny v1.0.0
@@ -47,7 +45,6 @@ require (
 	github.com/golang/snappy v0.0.3 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
-	github.com/grafana/grafana-plugin-sdk-go v0.140.0
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/klauspost/compress v1.13.1 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
