@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend/httpclient"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend/httpclient"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e/storage"
 )
 
 type RoundTripper struct {

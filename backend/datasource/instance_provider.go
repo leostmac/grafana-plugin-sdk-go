@@ -3,8 +3,8 @@ package datasource
 import (
 	"fmt"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend/instancemgmt"
 )
 
 // InstanceFactoryFunc factory method for creating data source instances.

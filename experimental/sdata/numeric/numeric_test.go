@@ -3,8 +3,8 @@ package numeric_test
 import (
 	"testing"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/sdata/numeric"
+	"github.com/leostmac/grafana-plugin-sdk-go/data"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/sdata/numeric"
 	"github.com/stretchr/testify/require"
 )
 

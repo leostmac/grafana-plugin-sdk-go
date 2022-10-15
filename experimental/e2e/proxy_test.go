@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/config"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/fixture"
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e/config"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e/fixture"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e/storage"
 	"github.com/stretchr/testify/require"
 )
 

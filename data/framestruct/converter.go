@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/leostmac/grafana-plugin-sdk-go/data"
 )
 
 const frameTag = "frame"

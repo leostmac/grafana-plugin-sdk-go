@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend"
 	"github.com/stretchr/testify/require"
 )
 

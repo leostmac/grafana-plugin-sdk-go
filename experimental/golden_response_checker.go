@@ -13,8 +13,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana-plugin-sdk-go/data"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend"
+	"github.com/leostmac/grafana-plugin-sdk-go/data"
 	"github.com/stretchr/testify/assert"
 )
 

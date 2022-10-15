@@ -3,8 +3,8 @@ package datasource_test
 import (
 	"context"
 
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend/datasource"
 )
 
 func ExampleQueryTypeMux() {

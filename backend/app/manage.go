@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend"
 	"github.com/leostmac/grafana-plugin-sdk-go/noninternal/automanagement"
 	"github.com/leostmac/grafana-plugin-sdk-go/noninternal/standalone"
 )

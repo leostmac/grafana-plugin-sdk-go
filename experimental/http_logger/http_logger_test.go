@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/experimental/e2e/storage"
-	httplogger "github.com/grafana/grafana-plugin-sdk-go/experimental/http_logger"
+	"github.com/leostmac/grafana-plugin-sdk-go/experimental/e2e/storage"
+	httplogger "github.com/leostmac/grafana-plugin-sdk-go/experimental/http_logger"
 	"github.com/stretchr/testify/require"
 )
 

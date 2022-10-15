@@ -1,7 +1,7 @@
 package backend
 
 import (
-	"github.com/grafana/grafana-plugin-sdk-go/backend/log"
+	"github.com/leostmac/grafana-plugin-sdk-go/backend/log"
 )
 
 // Logger is the default logger instance. This can be used directly to log from
