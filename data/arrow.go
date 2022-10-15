@@ -427,6 +427,15 @@ func initializeFrameField(field arrow.Field, idx int, nullable []bool, sdkField 
 	return nil
 }
 
+func populateFrameFieldsFromInterfaces(columns []array.Interface, nullable []bool, frame *Frame) error {
+	for i := 0; i < len(frame.Fields); i++ {
+		if err := parseColumn(columns[i], i, nullable, frame); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 func populateFrameFieldsFromRecord(record array.Record, nullable []bool, frame *Frame) error {
 	for i := 0; i < len(frame.Fields); i++ {
 		col := record.Column(i)
@@ -686,6 +695,22 @@ func populateFrameFromSchema(schema *arrow.Schema, frame *Frame) error {
 	}
 
 	return err
+}
+
+// FromArrowSchemaAndInterfaces converts an Arrow schema together with an Interface array into a Frame.
+func FromArrowSchemaAndInterfaces(schema *arrow.Schema, columns []array.Interface) (*Frame, error) {
+	frame := &Frame{}
+	if err := populateFrameFromSchema(schema, frame); err != nil {
+		return nil, err
+	}
+	nullable, err := initializeFrameFields(schema, frame)
+	if err != nil {
+		return nil, err
+	}
+	if err = populateFrameFieldsFromInterfaces(columns, nullable, frame); err != nil {
+		return nil, err
+	}
+	return frame, nil
 }
 
 // FromArrowRecord converts a an Arrow record batch into a Frame.
