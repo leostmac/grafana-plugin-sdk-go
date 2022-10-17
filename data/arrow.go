@@ -713,6 +713,28 @@ func FromArrowSchemaAndInterfaces(schema *arrow.Schema, columns []array.Interfac
 	return frame, nil
 }
 
+// FromArrowSchemaIntoSeparateFrames converts each column in an Arrow schema into a separate Frame.
+func FromArrowSchemaIntoSeparateFrames(schema *arrow.Schema, columns []array.Interface) ([]*Frame, error) {
+	var frames []*Frame
+	for colNum := 1; colNum < len(schema.Fields()); colNum++ {
+		newSchema := arrow.NewSchema([]arrow.Field{schema.Field(0), schema.Field(colNum)}, nil)
+		newFrame := &Frame{}
+		if err := populateFrameFromSchema(newSchema, newFrame); err != nil {
+			return nil, err
+		}
+		nullable, err := initializeFrameFields(newSchema, newFrame)
+		if err != nil {
+			return nil, err
+		}
+
+		if err = populateFrameFieldsFromInterfaces([]array.Interface{columns[0], columns[colNum]}, nullable, newFrame); err != nil {
+			return nil, err
+		}
+		frames = append(frames, newFrame)
+	}
+	return frames, nil
+}
+
 // FromArrowRecord converts a an Arrow record batch into a Frame.
 func FromArrowRecord(record array.Record) (*Frame, error) {
 	schema := record.Schema()
